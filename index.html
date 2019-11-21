@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<title>Task</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!---================== CSS Section Start ===================-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.5.0/css/font-awesome.css"/>
+		<link rel="stylesheet" type="text/css" href="css/custom.css"/>
+        <!---================== CSS Section End =====================-->
+    </head>
+    <body>
+		<header>
+			<div class="container mob-padding">
+	    		<div class="card-main-container" id="sigin_Page">
+	    			<!---================== Signin container Start ===================-->
+		    		<div class="col-sm-6 no-padding card-conatiner signin-container" id="mob-signin-hide">
+						<div class="card-body text-center icon-border padding mob-card-margin">
+							<h5 class="card-title font-weight-bold m-b-1">Sign in</h5>
+						    <i class="fa fa-google-plus m-r-1"></i>
+						    <i class="fa fa-facebook m-r-1"></i>
+						    <i class="fa fa-linkedin"></i>
+					    	<p class="card-text font-weight-nr m-t-1 fs-12">or use your account</p>
+						    <form class="input-bg" id="signin_Form" action="#">
+								<div class="form-group">
+								   <input type="email" class="form-control fs-14" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" rel="tooltip" title ="Please enter valid email address">
+								</div>
+								<div class="form-group">
+								   <input type="password" class="form-control fs-14" id="exampleInputPassword1" placeholder="Password" rel="tooltip" title ="Please enter valid password">
+								</div>
+								<p class="card-text font-weight-nr fs-12 d-none d-sm-block d-xs-block">Forgot password?</p>
+								<button class="btn btn-custom-color text-center text-uppercase fs-12 p-r-2 p-l-2">Sign in</button>
+								<p class="m-t-1 fs-12 d-md-none d-lg-none d-xl-none">Create an account<a href="#" class="card-text font-weight-nr d-md-none d-lg-none d-xl-none" id="mob-signup-page"> Sign up</a></p>
+							</form>
+						</div>
+					</div>
+					<!---================== Signin container End ===================-->
+
+					<!---================== Signup container Start ===================-->
+					<div class="col-sm-6 no-padding card-conatiner signup-container" id="mob-show-signup">
+						<div class="card-body text-center icon-border padding mob-card-margin1">
+						    <h5 class="card-title font-weight-bold m-b-1">Create your account</h5>
+						    <i class="fa fa-google-plus m-r-1"></i>
+						    <i class="fa fa-facebook m-r-1"></i>
+						    <i class="fa fa-linkedin"></i>
+						    <p class="card-text font-weight-nr m-t-1 fs-12">or use your email for registrations</p>
+						    <form class="input-bg" id="signup_Form">
+						    	<div class="form-group">
+								   <input type="name" class="form-control fs-14" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Name" rel="tooltip" title ="Please enter name">
+								</div>
+								<div class="form-group">
+								   <input type="email" class="form-control fs-14" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Email" rel="tooltip" title ="Please enter valid email address">
+								</div>
+								<div class="form-group">
+								   <input type="password" class="form-control fs-14" id="exampleInputPassword2" placeholder="Password" rel="tooltip" title ="Please enter valid password">
+								</div>
+								<button class="btn btn-custom-color text-uppercase fs-12 p-r-2 p-l-2">Sign up</button>
+								<p class="m-t-1 fs-12 d-md-none d-lg-none d-xl-none">Already have an account,<a href="#" class="card-text font-weight-nr d-md-none d-lg-none d-xl-none" id="mob-signin-page"> Sign in</a></p>
+							</form>
+						</div>
+					</div>
+					<!---================== Signup container End ===================-->	
+
+					<!---================== Overlay container Start ===================-->
+					<div class="overlay-container d-none d-sm-block">
+						<div class="overlay">
+							<div class="overlay-panel overlay-left button-content">
+								<h3>Welcome Back!</h3>
+								<p class="fs-14">To keep connected with us please login with your personal info</p>
+								<button id="signin-btn">Sign in</button>
+							</div>
+							<div class="overlay-panel overlay-right button-content">
+								<h3>Hello, Friend!</h1>
+								<p class="fs-14">Enter your personal details and start journey with us</p>
+								<button id="signup-btn">Sign up</button>
+							</div>
+						</div>
+					</div>
+					<!---================== Overlay container End ===================-->
+				</div>
+			</div>
+		</header>
+
+    	<!---================== JS Section Start ====================-->
+    	<script type="text/javascript" src="js/jquery.min.js"></script>
+    	<script type="text/javascript" src="js/popper.js"></script>
+    	<script type="text/javascript" src="js/tooltip.js"></script>
+    	<script type="text/javascript" src="js/bootstrap.js"></script>
+    	<script type="text/javascript" src="js/custom.js"></script>
+    	<script type="text/javascript">
+    		$(document).ready(function(){
+    			$('#signup-btn').click(function(){
+				    $('#sigin_Page').addClass('right-panel-active');
+				});
+				$('#signin-btn').click(function(){
+				    $('#sigin_Page').removeClass('right-panel-active');
+				});
+				$('#mob-signup-page').click(function(){
+				    $('#mob-show-signup').show();
+				    $('#mob-signin-hide').hide();
+				});
+				$('#mob-signin-page').click(function(){
+				    $('#mob-signin-hide').show();
+				    $('#mob-show-signup').hide();
+				});
+    		});
+    	</script>
+    	<!---================== JS Section End ======================-->
+    </body>
+</html>
+
+
+  
